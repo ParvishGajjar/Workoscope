@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function FuncForm() {
+  		event.preventDefault()
+  		var x = document.forms["myForm"]["fname"].value;
+  		var y = document.forms["myForm"]["lname"].value;
+  		var z = "Registration Successfully completed by "+x+" "+y;
+  		document.getElementById("demo1").innerHTML=z;
+	}
+
+	function FuncMath(){
+		var arr=[8,9,10,11,12];
+		document.getElementById("beforemap").innerHTML=arr;
+		var newarr=arr.map(FuncMap); //mapping an array
+		document.getElementById("demo2").innerHTML=newarr;
+	}
+	//This function does certain mathematical operation
+	function FuncMap(num){
+		var x=document.getElementById("valone").value;
+		return 10*x+num;
+	}
+</script>
+</head>
+<body>
+	<h3>Basic Understanding</h3>
+	<!--Form takes values and then script does the remaining magic!-->
+	<form name="myForm" action="" onsubmit="FuncForm()" method="post">
+  		First Name: <input type="text" name="fname"><br>
+  		Last Name: <input type="text" name="lname"><br>
+  		<input type="submit" value="Submit">
+	</form>
+
+	<p id="demo1"></p>
+
+	<br><br>
+	<h3>Map Example</h3>
+	<br>
+	<!--Enter any number, for map example in JS-->
+	<input type="text" name="valone" id="valone"><br>
+	<button onclick="FuncMath()">Submit Value</button>
+	<p>Value before using map function:</p><p id="beforemap"></p>
+	<p>Value after using map function: </p><p id="demo2"></p>
+</body>
+</html>
+
+
+
