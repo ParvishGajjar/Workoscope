@@ -7,6 +7,5 @@ function Func(item){
 		var n=item.name;
 		var v=item.maths+item.science+item.social;
 		dict[n]=v
-		console.log(dict)
 		return dict
 }
