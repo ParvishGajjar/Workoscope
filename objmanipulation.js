@@ -81,5 +81,5 @@ console.log(LObj);
 
 //ToLocaleString
 var date = new Date();
-var str = d.toLocaleString();
+var str = date.toLocaleString();
 console.log(str)
