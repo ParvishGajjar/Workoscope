@@ -19,3 +19,10 @@ function bisgreat(){
 var e=(a>b)?aisgreat():bisgreat();
 console.log(e);
 
+//converting above two function into one
+
+function oneisenough(a,b)
+{
+	return (a>b)?"A is greater than B":"B is greater than A";
+}
+console.log(oneisenough(a,b));
