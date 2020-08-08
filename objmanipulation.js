@@ -83,3 +83,11 @@ console.log(LObj);
 var date = new Date();
 var str = date.toLocaleString();
 console.log(str)
+
+
+//JSON Stringify and JSON Parse
+//JSON.stringify() takes a JavaScript object and then transforms it into a JSON string.
+//JSON.parse() takes a JSON string and then transforms it into a JavaScript object.
+var s = JSON.stringify(date);
+console.log(s);
+console.log(JSON.parse(s));
