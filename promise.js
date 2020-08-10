@@ -124,3 +124,23 @@ np().then((msg)=>{
 }).catch((msg)=>{
 	console.log(msg);
 })
+
+// promise example #6
+
+const dataone = new Promise((resolve,reject) =>{
+	setTimeout(()=>{
+		resolve("Data One");
+	},1000);
+})
+const datatwo = new Promise((resolve,reject)=>{
+	resolve("Data Two");
+})
+const datathree = new Promise((resolve,reject)=>{
+	resolve("Data Three")
+})
+
+
+Promise.race([dataone,datatwo,datathree])
+.then((msg)=>{
+	console.log(msg);
+})
