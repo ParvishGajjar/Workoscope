@@ -11,7 +11,23 @@ app.get('/api/users', function (req, res) {
 })
 
 app.post('/api/add',function(req,res){
-	console.log(req.body.name+"\n"+req.body.email)
+	fs.readFile( __dirname + "/" + "info.json", 'utf8', function (err, data) {
+      if(req.body.name && req.body.email){
+      	data=JSON.parse(data);
+      	data.push({"name":req.body.name,"email":req.body.email});
+      	data=JSON.stringify(data);
+      	fs.writeFile(__dirname+"/"+"info.json",data,'utf8',function(err,data){
+      		if(err){
+      			console.log(err);
+      		}
+      		else{
+      			console.log("Data Written")
+      		}
+      		
+      	})
+      	console.log(data)
+	}
+   });
 	res.send('Data Posted')
 })
 
