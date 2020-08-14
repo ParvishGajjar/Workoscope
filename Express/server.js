@@ -34,7 +34,8 @@ app.get('/api/users/:name', function (req, res) {
       //       return null;
       //    }
       // })
-      res.end(JSON.stringify(_.find(newdata, _.matchesProperty('name', nameparam))));
+      // res.end(JSON.stringify(_.find(newdata, _.matchesProperty('name', nameparam))));
+      res.end(JSON.stringify(newdata[_.indexOf(newdata.map(function(obj) { return obj.name; }),nameparam)]))
    });
 })
 app.post('/api/add',function(req,res){
