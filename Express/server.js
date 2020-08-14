@@ -16,7 +16,7 @@ app.get('/api/users/:name', function (req, res) {
       var dataoutput=[]
       for(let items in newdata){
          if(newdata[items].name === nameparam){
-            dataoutput.push({'name': nameparam,'email': newdata[items].email})
+            dataoutput.push(newdata[items])
          }
       }
       // var dataoutput=newdata.map((items)=>{
