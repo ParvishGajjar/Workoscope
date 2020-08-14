@@ -9,7 +9,28 @@ app.get('/api/users', function (req, res) {
       res.end( data );
    });
 })
-
+app.get('/api/users/:name', function (req, res) {
+   fs.readFile( __dirname + "/" + "info.json", 'utf8', function (err, data) {
+      const nameparam=req.params.name;
+      var newdata=JSON.parse(data);
+      var dataoutput=[]
+      for(let items in newdata){
+         if(newdata[items].name === nameparam){
+            dataoutput.push({'name': nameparam,'email': newdata[items].email})
+         }
+      }
+      // var dataoutput=newdata.map((items)=>{
+      //    if(items.name === nameparam)
+      //    {
+      //       return {'name': nameparam,'email': items.email}
+      //    }
+      //    else{
+      //       return null;
+      //    }
+      // })
+      res.end(JSON.stringify(dataoutput))
+   });
+})
 app.post('/api/add',function(req,res){
 	fs.readFile( __dirname + "/" + "info.json", 'utf8', function (err, data) {
       if(req.body.name && req.body.email){
