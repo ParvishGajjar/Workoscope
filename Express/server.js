@@ -13,12 +13,17 @@ app.get('/api/users/:name', function (req, res) {
    fs.readFile( __dirname + "/" + "info.json", 'utf8', function (err, data) {
       const nameparam=req.params.name;
       var newdata=JSON.parse(data);
-      var dataoutput=[]
-      for(let items in newdata){
-         if(newdata[items].name === nameparam){
-            dataoutput.push(newdata[items])
-         }
-      }
+      // var dataoutput=[]
+      // dataoutput.push(_.find(newdata, function(items){
+      //    if(items.name === nameparam){
+      //       return items;
+      //    }
+      // }))
+      // for(let items in newdata){
+      //    if(newdata[items].name === nameparam){
+      //       dataoutput.push(newdata[items])
+      //    }
+      // }
       // var dataoutput=newdata.map((items)=>{
       //    if(items.name === nameparam)
       //    {
@@ -28,7 +33,7 @@ app.get('/api/users/:name', function (req, res) {
       //       return null;
       //    }
       // })
-      res.end(JSON.stringify(dataoutput))
+      res.end(JSON.stringify(_.find(newdata, _.matchesProperty('name', nameparam))));
    });
 })
 app.post('/api/add',function(req,res){
