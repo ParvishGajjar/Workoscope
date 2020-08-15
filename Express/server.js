@@ -10,6 +10,8 @@ app.get('/api/users', function (req, res) {
       res.end( data );
    });
 })
+
+//Get User's data by passing parameter which would have substring from his name
 app.get('/api/users/:name', function (req, res) {
    fs.readFile( __dirname + "/" + "info.json", 'utf8', function (err, data) {
       const nameparam=req.params.name;
@@ -20,11 +22,12 @@ app.get('/api/users/:name', function (req, res) {
       //       return items;
       //    }
       // }))
-      // for(let items in newdata){
-      //    if(newdata[items].name === nameparam){
-      //       dataoutput.push(newdata[items])
-      //    }
-      // }
+      for(let items in newdata){
+         if(newdata[items].name.includes(nameparam)){
+            dataoutput.push(newdata[items])
+         }
+      }
+      res.end(JSON.stringify(dataoutput));
       // var dataoutput=newdata.map((items)=>{
       //    if(items.name === nameparam)
       //    {
@@ -36,7 +39,7 @@ app.get('/api/users/:name', function (req, res) {
       // })
       // res.end(JSON.stringify(_.find(newdata, _.matchesProperty('name', nameparam))));
       // res.end(JSON.stringify(newdata[_.indexOf(newdata.map(function(obj) { return obj.name; }),nameparam)]))
-      res.end(JSON.stringify(_.reduce(newdata,function(x,y){return (x.name === nameparam)?{'name':x.name,'email':x.email}:y;})));
+      // res.end(JSON.stringify(_.reduce(newdata,function(x,y){return (x.name === nameparam)?x:y;})));
    });
 })
 app.post('/api/add',function(req,res){
