@@ -17,9 +17,9 @@
 			event.preventDefault();
   			var xhttp = new XMLHttpRequest();
   			xhttp.onreadystatechange = function() {
-    			if (xhttp.readyState == 4 && xhttp.status == 200) {
-      				document.getElementById("printdata").innerHTML = xhttp.responseText;
-    			}
+    				if (xhttp.readyState == 4 && xhttp.status == 200) {
+      					document.getElementById("printdata").innerHTML = xhttp.responseText;
+    				}
   			};
   			xhttp.open("GET", "/api/users", true);
   			xhttp.send();
@@ -29,13 +29,13 @@
 			event.preventDefault();
   			var xhttp = new XMLHttpRequest();
   			const json = {
-    			"name": document.getElementById("uname").value,
-    			"email": document.getElementById("email").value
+    				"name": document.getElementById("uname").value,
+    				"email": document.getElementById("email").value
 			};
   			xhttp.onreadystatechange = function() {
-    			if (xhttp.readyState == 4 && xhttp.status == 200) {
-      				document.getElementById("post").innerHTML = xhttp.responseText;
-    			}
+    				if (xhttp.readyState == 4 && xhttp.status == 200) {
+      					document.getElementById("post").innerHTML = xhttp.responseText;
+    				}
   			};
   			xhttp.open("POST", "/api/add", true);
   			xhttp.setRequestHeader("Content-type", "application/json");
@@ -47,9 +47,9 @@
 			const searchparam=document.getElementById("name").value;
   			var xhttp = new XMLHttpRequest();
   			xhttp.onreadystatechange = function() {
-    			if (xhttp.readyState == 4 && xhttp.status == 200) {
-      				document.getElementById("searched").innerHTML = xhttp.responseText;
-    			}
+    				if (xhttp.readyState == 4 && xhttp.status == 200) {
+      					document.getElementById("searched").innerHTML = xhttp.responseText;
+    				}
   			};
   			xhttp.open("GET", "/api/users/"+searchparam, true);
   			xhttp.send();
