@@ -12,14 +12,14 @@
 			});
     	});
 	</script> -->
-	<script type="text/javascript">
+<!-- 	<script type="text/javascript">
 		function fetchdata() {
 			event.preventDefault();
   			var xhttp = new XMLHttpRequest();
   			xhttp.onreadystatechange = function() {
-    				if (xhttp.readyState == 4 && xhttp.status == 200) {
-      					document.getElementById("printdata").innerHTML = xhttp.responseText;
-    				}
+    			if (xhttp.readyState == 4 && xhttp.status == 200) {
+      				document.getElementById("printdata").innerHTML = xhttp.responseText;
+    			}
   			};
   			xhttp.open("GET", "/api/users", true);
   			xhttp.send();
@@ -29,13 +29,13 @@
 			event.preventDefault();
   			var xhttp = new XMLHttpRequest();
   			const json = {
-    				"name": document.getElementById("uname").value,
-    				"email": document.getElementById("email").value
+    			"name": document.getElementById("uname").value,
+    			"email": document.getElementById("email").value
 			};
   			xhttp.onreadystatechange = function() {
-    				if (xhttp.readyState == 4 && xhttp.status == 200) {
-      					document.getElementById("post").innerHTML = xhttp.responseText;
-    				}
+    			if (xhttp.readyState == 4 && xhttp.status == 200) {
+      				document.getElementById("post").innerHTML = xhttp.responseText;
+    			}
   			};
   			xhttp.open("POST", "/api/add", true);
   			xhttp.setRequestHeader("Content-type", "application/json");
@@ -47,13 +47,61 @@
 			const searchparam=document.getElementById("name").value;
   			var xhttp = new XMLHttpRequest();
   			xhttp.onreadystatechange = function() {
-    				if (xhttp.readyState == 4 && xhttp.status == 200) {
-      					document.getElementById("searched").innerHTML = xhttp.responseText;
-    				}
+    			if (xhttp.readyState == 4 && xhttp.status == 200) {
+      				document.getElementById("searched").innerHTML = xhttp.responseText;
+    			}
   			};
   			xhttp.open("GET", "/api/users/"+searchparam, true);
   			xhttp.send();
 		}
+</script> -->
+<script type="text/javascript">
+	function fetchdata(){
+		event.preventDefault();
+		fetch('/api/users')
+		.then(res => res.json())
+		.then(data => {
+			console.log(data)
+			document.getElementById("printdata").innerHTML = JSON.stringify(data);
+		})
+		.catch(err=>{
+			console.log("Error")
+			document.getElementById("printdata").innerHTML = "Sorry! Error Detected";
+		})
+	}
+	function postdata(){
+		event.preventDefault();
+		const post_data = {
+    		"name": document.getElementById("uname").value,
+    		"email": document.getElementById("email").value
+		};
+		fetch('/api/add', {
+			method: 'POST',
+			headers: {
+				'Content-type': 'application/json'
+			},
+			body: JSON.stringify(post_data)
+		})
+		.then(res => document.getElementById("post").innerHTML="Data Inserted")
+		.catch(err=>{
+			console.log("Error")
+			document.getElementById("post").innerHTML = "Sorry! Error Detected";
+		})	
+	}
+	function search(){
+		event.preventDefault();
+		const searchparam=document.getElementById("name").value;
+		fetch('/api/users/'+searchparam)
+		.then(res => res.json())
+		.then(data => {
+			console.log(data)
+			document.getElementById("searched").innerHTML = JSON.stringify(data);
+		})
+		.catch(err=>{
+			console.log("Error")
+			document.getElementById("searched").innerHTML = "Sorry! Error Detected";
+		})
+	}
 </script>
 </head>
 <body>
