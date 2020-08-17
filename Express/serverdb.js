@@ -1,6 +1,7 @@
 var express = require('express');
 var _ = require('lodash');
 const mysql = require('mysql');
+var path = require('path');
 var app = express();
 app.use(express.json())
 
@@ -17,6 +18,10 @@ connection.connect(function(err) {
   }
 
   console.log('Connected to the MySQL server.');
+});
+
+app.get('/',function(req,res) {
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.get('/api/users', function (req, res) {
