@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX Request Test</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript">
+		$(document).ready(function () {
+			$("button").click(function(){
+  				$.get("/api/users", function(data, status){
+    				alert("Data: " + data + "\nStatus: " + status);
+  				});
+			});
+    	});
+	</script> -->
+	<script type="text/javascript">
+		function fetchdata() {
+			event.preventDefault();
+  			var xhttp = new XMLHttpRequest();
+  			xhttp.onreadystatechange = function() {
+    			if (xhttp.readyState == 4 && xhttp.status == 200) {
+      				document.getElementById("printdata").innerHTML = xhttp.responseText;
+    			}
+  			};
+  			xhttp.open("GET", "/api/users", true);
+  			xhttp.send();
+		}
+
+		function postdata() {
+			event.preventDefault();
+  			var xhttp = new XMLHttpRequest();
+  			const json = {
+    			"name": document.getElementById("uname").value,
+    			"email": document.getElementById("email").value
+			};
+  			xhttp.onreadystatechange = function() {
+    			if (xhttp.readyState == 4 && xhttp.status == 200) {
+      				document.getElementById("post").innerHTML = xhttp.responseText;
+    			}
+  			};
+  			xhttp.open("POST", "/api/add", true);
+  			xhttp.setRequestHeader("Content-type", "application/json");
+  			xhttp.send(JSON.stringify(json));
+		}
+
+		function search(){
+			event.preventDefault();
+			const searchparam=document.getElementById("name").value;
+  			var xhttp = new XMLHttpRequest();
+  			xhttp.onreadystatechange = function() {
+    			if (xhttp.readyState == 4 && xhttp.status == 200) {
+      				document.getElementById("searched").innerHTML = xhttp.responseText;
+    			}
+  			};
+  			xhttp.open("GET", "/api/users/"+searchparam, true);
+  			xhttp.send();
+		}
+</script>
+</head>
+<body>
+	<h3>Press "Get Data" to get data of all users</h3>
+	<button id="getdata" onclick="fetchdata()">Get Data</button>
+	<p id="printdata"></p>
+	<h3>Submit Data to insert new user in database</h3>
+	<form onsubmit="postdata()">
+		Name: <input type="text" name="uname" id="uname" required><br>
+		Email: <input type="email" name="email" id="email" required><br>
+		<input type="submit" value="Submit">
+	</form>
+	<p id="post"></p>
+	<h3>Search User</h3>
+	<form onsubmit="search()">
+		Name: <input type="text" name="name" id="name" required><br>
+		<input type="submit" value="Submit">
+	</form>
+	<p id="searched"></p>
+</body>
+</html>
