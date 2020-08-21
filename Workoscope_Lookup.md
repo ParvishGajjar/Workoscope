@@ -37,5 +37,36 @@
       * API call to update user data.
   <br/>
   
+  * API call being made when user selects the purpose of them using this platform.
+    API Details:
+      * API call to update user data.
+  <br/>
+  
+  * API call made when user enter his Professional Title.
+    API Details:
+      * API call to update user data
+  <br/>
+  
+  * API call made while Skills(Upto 6).
+    API Details:
+      * API Call: /GetSkillDAta
+    On Submission API call is made,
+    API Details:
+      * API Call: /updateprofessionaldetailsfreelancer
+      
+ ***
+<br/>
+### LOGIN INTO APP 
+***
+<br/>
+  * SEVERAL API Calls being made to fetch peers details.
+    API Details:
+      * API Call: /peerjs/myapp/peers
+      
+
+    
+  
+  
+  
   
     
