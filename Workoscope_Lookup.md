@@ -56,9 +56,11 @@
       
  ***
 <br/>
+
 ### LOGIN INTO APP 
 ***
 <br/>
+
   * SEVERAL API Calls being made to fetch peers details.
     API Details:
       * API Call: /peerjs/myapp/peers
