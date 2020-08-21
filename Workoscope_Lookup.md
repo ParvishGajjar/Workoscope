@@ -13,21 +13,21 @@
 
   * API call is made for getting countries
     API Details:
-      * API:https://www.workoscope.com/loadcountrydata
+      * API: https://www.workoscope.com/loadcountrydata
       * Request Type: POST
       * X-Requested-With: XML Http Request
   <br/>
   
   * API call is made to get states
     API Details:
-      * API:https://www.workoscope.com/getstates
+      * API: https://www.workoscope.com/getstates
       * Request Type: POST
       * X-Requested-With: XML Http Request 
   <br/>
   
   * API call made to get cities
     API Details:
-      * API:https://www.workoscope.com/getcity
+      * API: https://www.workoscope.com/getcity
       * Request Type: POST
       * X-Requested-With: XML Http Request 
     
