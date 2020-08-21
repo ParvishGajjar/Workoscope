@@ -63,10 +63,16 @@
 ***
 <br/>
 
-  * SEVERAL API Calls being made to fetch peers details.
+  * Continuous API Calls being made to fetch peers details.
     API Details:
       * API Call: /peerjs/myapp/peers
+  <br/>
       
+  * To check for the pending following request an API call is being made.
+    API Details:
+      * API Call: /Fetchfollowrequest
+  <br/>    
+  
 
     
   
