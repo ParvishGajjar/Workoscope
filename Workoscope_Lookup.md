@@ -30,4 +30,12 @@
       * API: https://www.workoscope.com/getcity
       * Request Type: POST
       * X-Requested-With: XML Http Request 
+  <br/>
+  
+  * API call being made when user Submits after selecting wich previous platforms user been using.
+    API Details:
+      * API call to update user data.
+  <br/>
+  
+  
     
