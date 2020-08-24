@@ -80,6 +80,7 @@
 ### VIEW PROFILE
 ***
 <br/>
+
   * API call made to get all the user details.
   <br/>
   
