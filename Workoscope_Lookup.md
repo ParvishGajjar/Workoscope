@@ -68,10 +68,14 @@
       * API Call: /peerjs/myapp/peers
   <br/>
       
-  * To check for the pending following request an API call is being made.
+  * To check for the pending follow request an API call is being made.
     API Details:
       * API Call: /Fetchfollowrequest
   <br/>    
+  
+  * To check for any notifications or unread messages API call is being made
+  <br/>
+  
   
 
     
