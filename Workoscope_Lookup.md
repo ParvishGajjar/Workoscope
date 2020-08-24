@@ -83,7 +83,7 @@
   * API call made to get all the user details.
   <br/>
   
-  * API Call made while upadting or removing cover page of profile
+  * API Call made while updating or removing cover page of profile
     
   <br/>
   
@@ -134,9 +134,13 @@
 ***
 <br/>
 
-  * API call made to fetch follow requests
+  * API call made to fetch follow requests.
   
-  * On clicking 'Message', Chat is opened while which api call made to fetch previous chat details with the users
+  * On clicking 'Message', Chat is opened while which api call made to fetch previous chat details with the users.
+  
+  * API call made to fetch recommendations in recommendation tab.
+  
+  * API call made to fetch current connections of user. 
  
   
 
