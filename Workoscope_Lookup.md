@@ -76,6 +76,7 @@
   * To check for any notifications or unread messages API call is being made.
 ***
  <br/>
+ 
 ### VIEW PROFILE
 ***
 <br/>
@@ -87,6 +88,7 @@
   * API call made if you upload your portfolio in upload portfolio section
 ***
   <br/>
+  
 ### EDIT PROFILE
 ***
 <br/>
