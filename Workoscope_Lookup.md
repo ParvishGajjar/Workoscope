@@ -81,7 +81,7 @@
 <br/>
 
   * Basic Details
-  
+    * Updating Profile Picture or Removing it will call an API.
     * Updating country, state or city; An POST API call is being made to update user's location, once user submits the updated data.
     * Updating Description, Once done an API call is made to update description of the user.
     
@@ -100,6 +100,18 @@
   
   <br/>
   
+  * Social Account
+  
+    * API call made if you add any social media link like linkedin, Github, etc and submitted.
+    * It is then fetched and also shown on your profile page under "You can also find me on" Section.
+    
+   <br/>
+   
+  * Upload Portfolio
+   
+    * API call made in upload portfolio.
+    
+ 
   
 
   
