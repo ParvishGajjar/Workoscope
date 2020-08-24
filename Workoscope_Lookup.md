@@ -81,13 +81,26 @@
 <br/>
 
   * Basic Details
-  <br/>
   
     * Updating country, state or city; An POST API call is being made to update user's location, once user submits the updated data.
     * Updating Description, Once done an API call is made to update description of the user.
+    
   <br/>
   
   * Freelancing Details
+    
+    * Updating Skills, Profession, Daily wage per hours, API Call is being made regarding it to update user details.
+    (Pre-filled Data isn't available for user)
+   
+  <br/>
+   
+  * Professional and Company Details
+  
+    * On updating professional title or other details, API cal, being made to update user details.
+  
+  <br/>
+  
+  
 
   
 
