@@ -59,7 +59,7 @@
  ***
 <br/>
 
-### LOGIN INTO APP 
+### LOGIN INTO AN APP 
 ***
 <br/>
 
@@ -75,7 +75,20 @@
   
   * To check for any notifications or unread messages API call is being made
   <br/>
+
+### EDIT PROFILE
+***
+<br/>
+
+  * Basic Details
+  <br/>
   
+    * Updating country, state or city; An POST API call is being made to update user's location, once user submits the updated data.
+    * Updating Description, Once done an API call is made to update description of the user.
+  <br/>
+  
+  * Freelancing Details
+
   
 
     
