@@ -80,7 +80,9 @@
 ### VIEW PROFILE
 ***
 <br/>
-
+  * API call made to get all the user details.
+  <br/>
+  
   * API Call made while upadting or removing cover page of profile
     
   <br/>
@@ -128,7 +130,13 @@
  ***
  <br/>
  
-    
+ ### 'Connects' in Menu
+***
+<br/>
+
+  * API call made to fetch follow requests
+  
+  * On clicking 'Message', Chat is opened while which api call made to fetch previous chat details with the users
  
   
 
