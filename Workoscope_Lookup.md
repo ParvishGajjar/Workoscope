@@ -84,11 +84,18 @@
   * API call made to get all the user details.
   <br/>
   
-  * API Call made while updating or removing cover page of profile
+  * API Call made while updating or removing cover page of profile.
     
   <br/>
   
-  * API call made if you upload your portfolio in upload portfolio section
+  * API call made if you upload your portfolio in upload portfolio section.
+  <br/>
+  
+  * Viewing Other's Profile(Who is in your connection), API call would be made if you want to remove user from your connection or message user(In case of message user it would take you to message inbox of user and will be fetching previous chat to show you).
+  <br/>
+  
+  * Viewing Other's Profile(Who is not in your connection), API call would be made if you want to connect with the user or a project inquiry could be sent to user.
+  
 ***
   <br/>
   
