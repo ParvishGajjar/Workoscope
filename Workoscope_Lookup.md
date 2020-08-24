@@ -73,14 +73,26 @@
       * API Call: /Fetchfollowrequest
   <br/>    
   
-  * To check for any notifications or unread messages API call is being made
-  <br/>
+  * To check for any notifications or unread messages API call is being made.
+***
+ <br/>
+### VIEW PROFILE
+***
+<br/>
 
+  * API Call made while upadting or removing cover page of profile
+    
+  <br/>
+  
+  * API call made if you upload your portfolio in upload portfolio section
+***
+  <br/>
 ### EDIT PROFILE
 ***
 <br/>
 
   * Basic Details
+  
     * Updating Profile Picture or Removing it will call an API.
     * Updating country, state or city; An POST API call is being made to update user's location, once user submits the updated data.
     * Updating Description, Once done an API call is made to update description of the user.
@@ -110,6 +122,10 @@
   * Upload Portfolio
    
     * API call made in upload portfolio.
+    
+ ***
+ <br/>
+ 
     
  
   
