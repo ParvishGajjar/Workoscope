@@ -207,20 +207,20 @@
    <br/>
    
    * Recent Jobs
-    * API call would be made to fetch all the jobs available recently(i.e. posted recently).
-    * On clicking see more you move ont to job explore page.
+      * API call would be made to fetch all the jobs available recently(i.e. posted recently).
+      * On clicking see more you move ont to job explore page.
    <br/>
    
    * Recommendation
-    * It contains recommendation of people you might wanna connect for which API is called, and too see more connections you are taken to new page for which again API would be called to fetch and give you more connection you caan make.
+      * It contains recommendation of people you might wanna connect for which API is called, and too see more connections you are taken to new page for which again API would be called to fetch and give you more connection you caan make.
    <br/>
    
    * Feed
-    * API call made to fetch the post based on your connections post(Prioritised by time posted).
+      * API call made to fetch the post based on your connections post(Prioritised by time posted).
    <br/>
    
    * Profile(In left section)
-    * User's profile pic, his connections and profile views made will be fetched through API
+      * User's profile pic, his connections and profile views made will be fetched through API
     
 ***
    <br/>
