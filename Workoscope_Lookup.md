@@ -198,12 +198,12 @@
 <br/>
     
    * Hastags
-    * API call made when user selects any of the hastags to show him feed with those hashtags.
+      * API call made when user selects any of the hastags to show him feed with those hashtags.
    <br/>
    
    * Explore
-    * API call made to fetch all the jobs in explore job tab, Other tabs resgarding this tab in the same page are Post Job and Manage Job.
-    * API call made to fetch the portfolio's of users.
+      * API call made to fetch all the jobs in explore job tab, Other tabs resgarding this tab in the same page are Post Job and Manage Job.
+      * API call made to fetch the portfolio's of users.
    <br/>
    
    * Recent Jobs
