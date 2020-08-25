@@ -63,6 +63,9 @@
 ***
 <br/>
 
+  * API call made to check whether user exists in database and to confirm his password.
+  <br/>
+  
   * Continuous API Calls being made to fetch peers details.
     API Details:
       * API Call: /peerjs/myapp/peers
@@ -150,11 +153,78 @@
   
   * API call made to fetch current connections of user. 
  
-  
+***
+ <br/>
+ 
+ ### 'Alert' in Menu
+***
+<br/>
 
+  * Contains notification section where all your notification will be shown, So whenever an event happens in which you are included an API would be called to notify you.
   
+  * Connection requests is the part where anyone who wants to be your friend can request you to accept their request. If you do so API call will be made to get you in connection else it will be removed from your connection request tab on declining and the other person could again send you a request.
+  
+***
+ <br/>
+ 
+ ### 'Chat' in Menu
+***
+<br/>
 
+  * In chat there is a pencil option which on clicking you can decide if you want to message anyone from your friendlist/connections. So API call will be made such that your connections are fetched there.
+  
+  * On compose, samee thing as mentioned above will happen.
+  
+  * On sending a message to your conncection api would be called in order to show you those message, they needed to be stored in database.
+  
+  * Job offer can be sent in the chat message options which call an API regarding it.
+  
+***
+<br/>
+
+### Search
+***
+<br/>
+
+  * You can directly search from the top at home which will run a search query API with LIKE function.
+  
+  * Their are also options for searching by categories based on their professional title for which API will be called to fetch userss having such title's.
+
+***
+ <br/>
+ 
+### HOME
+***
+<br/>
     
+   * Hastags
+    * API call made when user selects any of the hastags to show him feed with those hashtags.
+   <br/>
+   
+   * Explore
+    * API call made to fetch all the jobs in explore job tab, Other tabs resgarding this tab in the same page are Post Job and Manage Job.
+    * API call made to fetch the portfolio's of users.
+   <br/>
+   
+   * Recent Jobs
+    * API call would be made to fetch all the jobs available recently(i.e. posted recently).
+    * On clicking see more you move ont to job explore page.
+   <br/>
+   
+   * Recommendation
+    * It contains recommendation of people you might wanna connect for which API is called, and too see more connections you are taken to new page for which again API would be called to fetch and give you more connection you caan make.
+   <br/>
+   
+   * Feed
+    * API call made to fetch the post based on your connections post(Prioritised by time posted).
+   <br/>
+   
+   * Profile(In left section)
+    * User's profile pic, his connections and profile views made will be fetched through API
+    
+***
+   <br/>
+  
   
   
   
